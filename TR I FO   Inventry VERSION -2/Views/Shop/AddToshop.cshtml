@@ -1,0 +1,75 @@
+﻿@model TR_I_FO___Inventry_VERSION__2.Models.Databases.Shop
+
+@{
+    ViewData["Title"] = "AddToshop";
+}
+
+<h1>AddToshop</h1>
+
+<h4>Shop</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddToshop">
+            <div class="form-group">
+                <label asp-for="Shop_prd_id" class="control-label"></label>
+                <input asp-for="Shop_prd_id" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="sProduct_name" class="control-label"></label>
+                <input asp-for="sProduct_name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="country" class="control-label"></label>
+                <input asp-for="country" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="sDescription" class="control-label"></label>
+                <input asp-for="sDescription" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Buy_Price" class="control-label"></label>
+                <input asp-for="Buy_Price" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Sell_Price" class="control-label"></label>
+                <input asp-for="Sell_Price" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="profit" class="control-label"></label>
+                <input asp-for="profit" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Image:</label>
+                <input type="file" name="file" class="form-control-file" accept="image/*">
+            </div>
+            <div class="form-group">
+                <label asp-for="sell_date" class="control-label"></label>
+                <input asp-for="sell_date" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantity" class="control-label"></label>
+                <input asp-for="Quantity" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer_name" class="control-label"></label>
+                <input asp-for="Customer_name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerEmail" class="control-label"></label>
+                <input asp-for="CustomerEmail" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer_mobiler" class="control-label"></label>
+                <input asp-for="Customer_mobiler" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="stock" class="control-label"></label>
+                <input asp-for="stock" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    </
