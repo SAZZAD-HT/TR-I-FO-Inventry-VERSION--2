@@ -1,69 +1,94 @@
 ﻿@model TR_I_FO___Inventry_VERSION__2.Models.Databases.Shop
 
 @{
-    ViewData["Title"] = "AddToshop";
+    ViewData["Title"] = "Edit";
 }
 
-<h1>AddToshop</h1>
+<h1>Edit</h1>
 
 <h4>Shop</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post" enctype="multipart/form-data" asp-action="AddToshop">
-           
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Shop_prd_id" />
             <div class="form-group">
                 <label asp-for="sProduct_name" class="control-label"></label>
                 <input asp-for="sProduct_name" class="form-control" />
+                <span asp-validation-for="sProduct_name" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="country" class="control-label"></label>
                 <input asp-for="country" class="form-control" />
+                <span asp-validation-for="country" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label>Description</label>
+                <label asp-for="sDescription" class="control-label"></label>
                 <input asp-for="sDescription" class="form-control" />
+                <span asp-validation-for="sDescription" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Buy_Price" class="control-label"></label>
-                <input type="number" asp-for="Buy_Price" class="form-control" />
+                <input asp-for="Buy_Price" class="form-control" />
+                <span asp-validation-for="Buy_Price" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Sell_Price" class="control-label"></label>
                 <input asp-for="Sell_Price" class="form-control" />
+                <span asp-validation-for="Sell_Price" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="profit" class="control-label"></label>
                 <input asp-for="profit" class="form-control" />
+                <span asp-validation-for="profit" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label>Image:</label>
-                <input type="file" name="file" class="form-control-file" accept="image/*">
+                <label asp-for="sPicture" class="control-label"></label>
+                <input asp-for="sPicture" class="form-control" />
+                <span asp-validation-for="sPicture" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="sell_date" class="control-label"></label>
                 <input asp-for="sell_date" class="form-control" />
+                <span asp-validation-for="sell_date" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Quantity" class="control-label"></label>
                 <input asp-for="Quantity" class="form-control" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Customer_name" class="control-label"></label>
                 <input asp-for="Customer_name" class="form-control" />
+                <span asp-validation-for="Customer_name" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="CustomerEmail" class="control-label"></label>
                 <input asp-for="CustomerEmail" class="form-control" />
+                <span asp-validation-for="CustomerEmail" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Customer_mobiler" class="control-label"></label>
                 <input asp-for="Customer_mobiler" class="form-control" />
+                <span asp-validation-for="Customer_mobiler" class="text-danger"></span>
             </div>
-           
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <label asp-for="stock" class="control-label"></label>
+                <input asp-for="stock" class="form-control" />
+                <span asp-validation-for="stock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
-    </
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

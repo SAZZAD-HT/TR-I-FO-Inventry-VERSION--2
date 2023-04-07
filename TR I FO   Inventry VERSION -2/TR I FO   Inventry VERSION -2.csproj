@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\images\" />
+    <Folder Include="Views\ShopController1\" />
   </ItemGroup>
 
 </Project>
