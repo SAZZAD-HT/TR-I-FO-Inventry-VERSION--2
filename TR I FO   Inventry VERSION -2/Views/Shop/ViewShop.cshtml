@@ -81,9 +81,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.profit)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.sPicture)
-            </td>
+                <td>
+                    <img src="@item.sPicture" alt="@item.sProduct_name" style="max-width:30px;max-height:10px" class="img-thumnail" />
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.sell_date)
             </td>
@@ -108,6 +108,8 @@
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
         </tr>
+       <img src="~/images/images.png" class="img-thumnail" />
 }
     </tbody>
 </table>
+

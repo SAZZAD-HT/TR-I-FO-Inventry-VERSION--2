@@ -1,0 +1,54 @@
+﻿@model TR_I_FO___Inventry_VERSION__2.Models.Databases.ImportList
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ImportList</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Import" />
+            <div class="form-group">
+                <label asp-for="sProduct_name" class="control-label"></label>
+                <input asp-for="sProduct_name" class="form-control" />
+                <span asp-validation-for="sProduct_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="country" class="control-label"></label>
+                <input asp-for="country" class="form-control" />
+                <span asp-validation-for="country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="sDescription" class="control-label"></label>
+                <input asp-for="sDescription" class="form-control" />
+                <span asp-validation-for="sDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="d_Quantity" class="control-label"></label>
+                <input asp-for="d_Quantity" class="form-control" />
+                <span asp-validation-for="d_Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cust_quantity" class="control-label"></label>
+                <input asp-for="cust_quantity" class="form-control" />
+                <span asp-validation-for="cust_quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
