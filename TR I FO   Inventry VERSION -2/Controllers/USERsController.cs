@@ -10,6 +10,7 @@ using TR_I_FO___Inventry_VERSION__2.Models.Databases;
 
 namespace TR_I_FO___Inventry_VERSION__2.Controllers
 {
+
     public class USERsController : Controller
     {
         private readonly context _context;
