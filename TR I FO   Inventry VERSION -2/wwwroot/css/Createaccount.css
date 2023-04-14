@@ -1,0 +1,79 @@
+﻿/* Background image */
+body {
+    background-image: url('../images/OIG.jpeg');
+    background-size: cover;
+    opacity: 0.9; /* Adjust opacity as needed */
+}
+
+/* Form container */
+.container {
+    margin-top: 50px;
+}
+
+
+/* Card styles */
+.card {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.card-header {
+    background-color: #343a40;
+    color: white;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Form input styles */
+.form-control {
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+/* Submit button animation */
+.btn-primary {
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+    .btn-primary:hover {
+        background-color: #218838;
+        transform: scale(1.1);
+    }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 20px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-header {
+        font-size: 1.2rem;
+    }
+
+    .form-group label {
+        font-size: 0.8rem;
+    }
+
+    .form-control {
+        font-size: 0.9rem;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem;
+    }
+}
