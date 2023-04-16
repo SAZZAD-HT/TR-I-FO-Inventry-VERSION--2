@@ -11,6 +11,7 @@ namespace TR_I_FO___Inventry_VERSION__2.Models.Databases
         public string User_name { get; set; }
         public string UserType { get; set; }
         public string Password { get; set; }
+        public string Approval { get; set; }        
         
     }
 }

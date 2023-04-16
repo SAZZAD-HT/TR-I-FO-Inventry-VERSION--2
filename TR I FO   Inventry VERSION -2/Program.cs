@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+
+using Microsoft.AspNetCore.Identity;
 using TR_I_FO___Inventry_VERSION__2.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<context>(options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("ContentCreatorConnection")));
+
 
 var app = builder.Build();
 
@@ -24,6 +27,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+app.MapRazorPages();
 
 app.MapControllerRoute(
     name: "default",

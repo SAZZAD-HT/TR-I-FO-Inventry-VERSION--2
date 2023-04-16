@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:TR_I_FO___Inventry_VERSION__2ContextConnection"
+    }
+  }
+}

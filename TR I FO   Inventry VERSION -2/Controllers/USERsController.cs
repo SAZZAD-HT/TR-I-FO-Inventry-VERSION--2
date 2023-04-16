@@ -160,5 +160,7 @@ namespace TR_I_FO___Inventry_VERSION__2.Controllers
         {
           return (_context.AccountInfo?.Any(e => e.User_id == id)).GetValueOrDefault();
         }
+
+        
     }
 }
