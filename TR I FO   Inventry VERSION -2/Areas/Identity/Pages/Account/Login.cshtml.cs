@@ -20,10 +20,10 @@ namespace TR_I_FO___Inventry_VERSION__2.Areas.Identity.Pages.Account
 {
     public class LoginModel : PageModel
     {
-        private readonly SignInManager<TR_I_FO___Inventry_VERSION__2User> _signInManager;
+        private readonly SignInManager<usercontext> _signInManager;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<TR_I_FO___Inventry_VERSION__2User> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<usercontext> signInManager, ILogger<LoginModel> logger)
         {
             _signInManager = signInManager;
             _logger = logger;

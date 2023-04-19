@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using TR_I_FO___Inventry_VERSION__2.Areas.Identity.Data;
 
-namespace TR_I_FO___Inventry_VERSION__2.Data;
+namespace TR_I_FO___Inventry_VERSION__2.Areas.Identity.Data;
 
-public class TR_I_FO___Inventry_VERSION__2Context : IdentityDbContext<TR_I_FO___Inventry_VERSION__2User>
+public class loginContext : IdentityDbContext<usercontext>
 {
-    public TR_I_FO___Inventry_VERSION__2Context(DbContextOptions<TR_I_FO___Inventry_VERSION__2Context> options)
+    public loginContext(DbContextOptions<loginContext> options)
         : base(options)
     {
     }

@@ -2,6 +2,9 @@ using Microsoft.EntityFrameworkCore;
 
 using Microsoft.AspNetCore.Identity;
 using TR_I_FO___Inventry_VERSION__2.Models;
+using TR_I_FO___Inventry_VERSION__2.Areas.Identity.Data;
+using System.Configuration;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +12,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<context>(options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("ContentCreatorConnection")));
+
+builder.Services.AddDbContext<loginContext>(options => options.UseSqlServer(
+    builder.Configuration.GetConnectionString("loginContextConnection")));
+
+
+builder.Services.AddDefaultIdentity<usercontext>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<loginContext>();
 
 
 var app = builder.Build();
@@ -25,6 +35,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();;
 
 app.UseAuthorization();
 app.MapRazorPages();

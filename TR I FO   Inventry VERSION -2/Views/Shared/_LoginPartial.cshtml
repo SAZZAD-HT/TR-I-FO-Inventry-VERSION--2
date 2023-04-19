@@ -1,8 +1,8 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using TR_I_FO___Inventry_VERSION__2.Areas.Identity.Data
 
-@inject SignInManager<TR_I_FO___Inventry_VERSION__2User> SignInManager
-@inject UserManager<TR_I_FO___Inventry_VERSION__2User> UserManager
+@inject SignInManager<usercontext> SignInManager
+@inject UserManager<usercontext> UserManager
 
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))

@@ -24,17 +24,17 @@ namespace TR_I_FO___Inventry_VERSION__2.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<TR_I_FO___Inventry_VERSION__2User> _signInManager;
-        private readonly UserManager<TR_I_FO___Inventry_VERSION__2User> _userManager;
-        private readonly IUserStore<TR_I_FO___Inventry_VERSION__2User> _userStore;
-        private readonly IUserEmailStore<TR_I_FO___Inventry_VERSION__2User> _emailStore;
+        private readonly SignInManager<usercontext> _signInManager;
+        private readonly UserManager<usercontext> _userManager;
+        private readonly IUserStore<usercontext> _userStore;
+        private readonly IUserEmailStore<usercontext> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
-            UserManager<TR_I_FO___Inventry_VERSION__2User> userManager,
-            IUserStore<TR_I_FO___Inventry_VERSION__2User> userStore,
-            SignInManager<TR_I_FO___Inventry_VERSION__2User> signInManager,
+            UserManager<usercontext> userManager,
+            IUserStore<usercontext> userStore,
+            SignInManager<usercontext> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
@@ -155,27 +155,27 @@ namespace TR_I_FO___Inventry_VERSION__2.Areas.Identity.Pages.Account
             return Page();
         }
 
-        private TR_I_FO___Inventry_VERSION__2User CreateUser()
+        private usercontext CreateUser()
         {
             try
             {
-                return Activator.CreateInstance<TR_I_FO___Inventry_VERSION__2User>();
+                return Activator.CreateInstance<usercontext>();
             }
             catch
             {
-                throw new InvalidOperationException($"Can't create an instance of '{nameof(TR_I_FO___Inventry_VERSION__2User)}'. " +
-                    $"Ensure that '{nameof(TR_I_FO___Inventry_VERSION__2User)}' is not an abstract class and has a parameterless constructor, or alternatively " +
+                throw new InvalidOperationException($"Can't create an instance of '{nameof(usercontext)}'. " +
+                    $"Ensure that '{nameof(usercontext)}' is not an abstract class and has a parameterless constructor, or alternatively " +
                     $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
             }
         }
 
-        private IUserEmailStore<TR_I_FO___Inventry_VERSION__2User> GetEmailStore()
+        private IUserEmailStore<usercontext> GetEmailStore()
         {
             if (!_userManager.SupportsUserEmail)
             {
                 throw new NotSupportedException("The default UI requires a user store with email support.");
             }
-            return (IUserEmailStore<TR_I_FO___Inventry_VERSION__2User>)_userStore;
+            return (IUserEmailStore<usercontext>)_userStore;
         }
     }
 }

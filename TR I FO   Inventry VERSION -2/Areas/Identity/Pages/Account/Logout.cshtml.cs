@@ -15,10 +15,10 @@ namespace TR_I_FO___Inventry_VERSION__2.Areas.Identity.Pages.Account
 {
     public class LogoutModel : PageModel
     {
-        private readonly SignInManager<TR_I_FO___Inventry_VERSION__2User> _signInManager;
+        private readonly SignInManager<usercontext> _signInManager;
         private readonly ILogger<LogoutModel> _logger;
 
-        public LogoutModel(SignInManager<TR_I_FO___Inventry_VERSION__2User> signInManager, ILogger<LogoutModel> logger)
+        public LogoutModel(SignInManager<usercontext> signInManager, ILogger<LogoutModel> logger)
         {
             _signInManager = signInManager;
             _logger = logger;
