@@ -1,4 +1,4 @@
-# Inventory Management Project
+# Inventory Management Project asp core
 
 This project is an Inventory Management application built using ASP.NET Core. It is being developed as an ongoing project and is expected to be delivered on April 18, 2023.
 
